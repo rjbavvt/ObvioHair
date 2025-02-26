@@ -1,0 +1,88 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black; /* Fondo negro en toda la página */
+    overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+/* Menú fijo centrado con fondo negro */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; /* Espacio entre botones */
+    padding: 15px 0;
+    z-index: 10000; /* Asegura que esté siempre encima */
+}
+
+/* Botones del menú */
+nav a {
+    text-decoration: none;
+}
+
+nav a img {
+    width: 50px; /* Tamaño base */
+    height: auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.2s;
+}
+
+nav a:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.2);
+}
+
+/* Secciones con imágenes a pantalla completa y fondo negro */
+section {
+    width: 100;
+    height: 100vh; /* Ocupar toda la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Fondo negro en todas las secciones */
+}
+
+/* Imágenes responsivas */
+section img {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    object-fit: contain;
+}
+
+/* 🔹 RESPONSIVE DESIGN 🔹 */
+@media (max-width: 1024px) {
+    nav {
+        gap: 15px;
+    }
+    nav a img {
+        width: 45px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 0;
+    }
+    nav a img {
+        width: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    nav a img {
+        width: 35px;
+    }
+}
